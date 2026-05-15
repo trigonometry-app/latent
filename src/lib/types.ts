@@ -1,5 +1,5 @@
 /** The kind of test administered */
-export type TestType = 'SAT' | 'PSAT' | 'StateTest' | 'AP';
+export type TestType = 'SAT' | 'PSAT' | 'StateTest';
 
 /** Which section of a test */
 export type Subject = 'math' | 'english';

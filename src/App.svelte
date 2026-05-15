@@ -66,7 +66,7 @@
 
   // ── UI state ─────────────────────────────────────────────────────────────
   let showAddForm = $state(false);
-  let newType: 'SAT' | 'PSAT' | 'AP' | 'StateTest' = $state('SAT');
+  let newType: 'SAT' | 'PSAT' | 'StateTest' = $state('SAT');
   let newEnglish = $state<number | undefined>(undefined);
   let newMath = $state<number | undefined>(undefined);
   let newYear = $state(new Date().getFullYear());
@@ -171,7 +171,6 @@
   const typeOptions = [
     { text: 'SAT', value: 'SAT' },
     { text: 'PSAT', value: 'PSAT' },
-    { text: 'AP', value: 'AP' },
     { text: 'State Test', value: 'StateTest' },
   ];
 </script>

@@ -207,13 +207,6 @@ function sbaPercentile(subject: Subject, score: number, grade: SbaGrade = 'HS'):
   return normalCdf(z) * 100;
 }
 
-// ─── AP → percentile (placeholder) ──────────────────────────────────────────
-// Individual AP exams: scale 1-5. Placeholder until we have real distributions.
-function apExamPercentile(_subject: Subject, _score: number): number {
-  // TODO: lookup real AP score distributions
-  return 50;
-}
-
 // ─── Public test → percentile dispatcher ────────────────────────────────────
 
 export function testPercentile(type: string, subject: Subject, score: number, grade?: number): number {
@@ -224,8 +217,6 @@ export function testPercentile(type: string, subject: Subject, score: number, gr
       return psatPercentile(subject, score);
     case 'StateTest':
       return sbaPercentile(subject, score, gradeToSbaGrade(grade));
-    case 'AP':
-      return apExamPercentile(subject, score);
     default:
       return 50;
   }
